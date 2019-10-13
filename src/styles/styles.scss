@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    background: #fff;
+}
+
+a {
+    &:focus {
+        outline-color: #83BBB6;
+    }
+}
+
+// footer
+.footer {
+    height: 389px;
+    min-height: 389px;
+    width: 100%;
+
+    &-inner {
+        height: inherit;
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 1472px;
+        margin: 0 auto;
+    }
+
+    // nav wrap
+    &-nav-wrap {
+        flex: 1 0 141px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-end;
+        padding-bottom: 14px;
+    }
+
+    // nav
+    &-nav {
+        max-width: 996px;
+        flex: 1 1 996px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+
+        // navigation links
+        &__link {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            flex: 0 auto;
+            color: #777777;
+
+            &:hover,
+            &--active {
+                color: #333333;
+            }
+        }
+    }
+
+    // form
+    &-form {
+        flex: 1 1 476px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        &__textfield {
+            flex: 1 auto;
+            height: 66px;
+            font-size: 16px;
+            padding: 0 31px;
+
+            &::placeholder {
+                color: #777777;
+            }
+        }
+
+        &__send {
+            flex: 0 1 66px;
+            height: 66px;
+            background: #83BBB6;
+            border: 0;
+            color: #fff;
+        }
+    }
+
+    // info
+    &-info {
+        flex: 1 0 141px;
+        min-height: 141px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: flex-start;
+        padding-top: 44px;
+
+        &__link {
+            margin: 0 33px;
+            flex: 0 auto;
+            font-size: 14px;
+            color: #888888;
+
+            &:hover {
+                color: lighten(#888888, 20%);
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // social links
+    &-social {
+        border-top: 1px solid #ededed;
+        min-height: 104px;
+        height: 104px;
+        flex: 1 0 104px;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-items: center;
+    }
+}
